@@ -7,13 +7,14 @@ import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
 import type { NativeStackNavigationOptions } from '@react-navigation/native-stack';
+import { IntlProvider } from 'react-intl';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
-export default function RootLayout() {
+function RootLayout() {
     // Unlock the screen orientation.
     // Screen does not rotate on samsung tab when unlock is not called
     useEffect(() => {
@@ -53,5 +54,13 @@ export default function RootLayout() {
             </Stack>
             <StatusBar style="auto" />
         </ThemeProvider>
+    );
+}
+
+export default function () {
+    return (
+        <IntlProvider locale="en" messages={{}} defaultLocale="en">
+            <RootLayout />
+        </IntlProvider>
     );
 }

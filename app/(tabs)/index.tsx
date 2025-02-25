@@ -1,5 +1,6 @@
 import { Canvas, Circle, Group } from '@shopify/react-native-skia';
 import { Image, Platform, StyleSheet } from 'react-native';
+import {FormattedMessage} from 'react-intl';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -33,6 +34,16 @@ export default function HomeScreen() {
                 <ThemedText type="title">Welcome!</ThemedText>
                 <HelloWave />
             </ThemedView>
+
+            <FormattedMessage
+                tagName={ThemedText}
+                id="hello_world"
+                defaultMessage="{number, plural, one {# person} other {# people}} <b>over here</b>"
+                values={{
+                    number: 123,
+                    b: x => <ThemedText type="defaultSemiBold" children={x} />,
+                }}
+            />
 
             <SkiaHelloWorld />
 

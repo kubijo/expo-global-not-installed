@@ -16,7 +16,8 @@
                 "foregroundImage": "./assets/images/adaptive-icon.png",
                 "backgroundColor": "#ffffff"
             },
-            "package": "com.kubijo.exporepro"
+            "package": "com.kubijo.exporepro",
+            "jsEngine": "hermes"
         },
         "web": {
             "bundler": "metro",
