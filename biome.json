@@ -1,0 +1,62 @@
+{
+    "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+    "vcs": {
+        "enabled": false,
+        "clientKind": "git",
+        "useIgnoreFile": true
+    },
+    "files": {
+        "ignoreUnknown": true,
+        "ignore": [".expo", ".git", "./android", "./ios"]
+    },
+    "formatter": {
+        "enabled": true,
+        "indentStyle": "space",
+        "indentWidth": 4,
+        "lineWidth": 112
+    },
+    "organizeImports": {
+        "enabled": true
+    },
+    "linter": {
+        "enabled": true,
+        "rules": {
+            "recommended": true,
+
+            "correctness": {
+                "noChildrenProp": "off"
+            },
+
+            "suspicious": {
+                "noArrayIndexKey": "off",
+                "noExplicitAny": "off",
+                "noShadowRestrictedNames": "off",
+                "noAssignInExpressions": "off",
+                "noConfusingVoidType": "off",
+                "noEmptyInterface": "off"
+            },
+
+            "complexity": {
+                "noForEach": "off"
+            },
+
+            "style": {
+                "noParameterAssign": "warn",
+                "noNonNullAssertion": "warn",
+                "useExponentiationOperator": "warn",
+                "noCommaOperator": "off",
+                "noInferrableTypes": "off",
+                "useFragmentSyntax": "off",
+                "useBlockStatements": "off",
+                "useDefaultParameterLast": "off",
+                "noUselessElse": "off"
+            }
+        }
+    },
+    "javascript": {
+        "formatter": {
+            "quoteStyle": "single",
+            "arrowParentheses": "asNeeded"
+        }
+    }
+}
