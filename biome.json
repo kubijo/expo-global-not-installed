@@ -7,7 +7,7 @@
     },
     "files": {
         "ignoreUnknown": true,
-        "ignore": [".expo", ".git", "./android", "./ios"]
+        "ignore": [".expo", ".git", "./android", "./ios", "./.storybook/storybook.requires.js"]
     },
     "formatter": {
         "enabled": true,

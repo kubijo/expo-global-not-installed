@@ -1,6 +1,6 @@
 import { Canvas, Circle, Group } from '@shopify/react-native-skia';
+import { FormattedMessage } from 'react-intl';
 import { Image, Platform, StyleSheet } from 'react-native';
-import {FormattedMessage} from 'react-intl';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
