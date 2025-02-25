@@ -1,5 +1,6 @@
+import { ImageBackground } from 'expo-image';
 import { useCallback, useState } from 'react';
-import { ImageBackground, ScrollView, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 const $ = StyleSheet.create({
