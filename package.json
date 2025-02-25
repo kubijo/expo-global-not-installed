@@ -8,7 +8,7 @@
         "android": "expo run:android",
         "test": "jest --watchAll",
         "postinstall": "yarn setup-skia-web public",
-        "format": "biome check --write --unsafe .",
+        "check": "biome check --write --unsafe . && tsc",
         "storybook": "STORYBOOK_ENABLED=true expo run:android --no-build-cache",
         "storybook-generate": "sb-rn-get-stories --use-js",
         "buf-generate": "buf generate --verbose buf.build/connectrpc/eliza"

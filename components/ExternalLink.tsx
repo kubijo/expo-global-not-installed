@@ -10,6 +10,7 @@ export function ExternalLink({ href, ...rest }: Props) {
         <Link
             target="_blank"
             {...rest}
+            // @ts-ignore: The "href" type is ok
             href={href}
             onPress={async event => {
                 if (Platform.OS !== 'web') {

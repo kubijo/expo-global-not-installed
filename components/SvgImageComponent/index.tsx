@@ -1,3 +1,3 @@
 import Logo from './logo.svg';
 
-export default Logo;
+export const SvgImageComponent = Logo;
