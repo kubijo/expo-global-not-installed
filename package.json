@@ -2,22 +2,24 @@
     "name": "expo-repro",
     "version": "1.0.0",
     "scripts": {
+        "prebuild": "yes | yarn expo prebuild --clean",
         "start": "expo start",
         "reset-project": "node ./scripts/reset-project.js",
         "android": "expo run:android",
-        "ios": "expo run:ios",
-        "web": "expo start --web",
         "test": "jest --watchAll",
-        "lint": "expo lint",
         "postinstall": "yarn setup-skia-web public",
         "format": "biome check --write --unsafe .",
         "storybook": "STORYBOOK_ENABLED=true expo run:android --no-build-cache",
-        "storybook-generate": "sb-rn-get-stories --use-js"
+        "storybook-generate": "sb-rn-get-stories --use-js",
+        "buf-generate": "buf generate --verbose buf.build/connectrpc/eliza"
     },
     "jest": {
         "preset": "jest-expo"
     },
     "dependencies": {
+        "@bufbuild/protobuf": "^2.2.3",
+        "@connectrpc/connect": "^2.0.1",
+        "@connectrpc/connect-web": "^2.0.1",
         "@expo/metro-config": "^0.19.11",
         "@expo/vector-icons": "^14.0.2",
         "@gorhom/bottom-sheet": "^5.1.1",
@@ -65,6 +67,8 @@
         "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
         "@babel/preset-typescript": "^7.26.0",
         "@biomejs/biome": "1.9.4",
+        "@bufbuild/buf": "^1.50.0",
+        "@bufbuild/protoc-gen-es": "^2.2.3",
         "@types/intl": "^1",
         "@types/jest": "^29.5.12",
         "@types/react": "~18.3.12",

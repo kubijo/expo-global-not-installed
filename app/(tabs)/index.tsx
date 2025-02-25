@@ -7,6 +7,7 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import SvgImageComponent from '@/components/SvgImageComponent';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import GrpcDemo from '@/components/grpc';
 
 const SkiaHelloWorld = () => {
     const width = 256;
@@ -35,6 +36,8 @@ export default function HomeScreen() {
                 <ThemedText type="title">Welcome!</ThemedText>
                 <HelloWave />
             </ThemedView>
+
+            <GrpcDemo />
 
             <SvgImageComponent width={256} height={256} />
 
