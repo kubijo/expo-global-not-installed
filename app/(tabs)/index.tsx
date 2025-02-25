@@ -4,6 +4,7 @@ import { Image, Platform, StyleSheet } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
+import SvgImageComponent from '@/components/SvgImageComponent';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
@@ -34,6 +35,8 @@ export default function HomeScreen() {
                 <ThemedText type="title">Welcome!</ThemedText>
                 <HelloWave />
             </ThemedView>
+
+            <SvgImageComponent width={256} height={256} />
 
             <FormattedMessage
                 tagName={ThemedText}
